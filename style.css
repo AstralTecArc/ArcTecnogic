@@ -1,0 +1,206 @@
+/*Configurações gerais*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Background*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(50, 50, 50);
+    color: rgb(255, 200, 0);
+
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.45)),
+        url("Imagens/wallpapertec.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*Ajuste imagem do Top*/
+.logo-topbar img {
+    height: 50px;
+    width: auto;
+}
+
+/*Ajuste da Barra*/
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid rgba(255, 200, 0, 0.3);
+}
+
+
+.topbar-actions nav {
+    display: flex;
+    gap: 10px;
+}
+
+.main-content {
+    margin-left: 240px;
+    margin-top: 80px;
+    padding: 30px;
+    min-height: calc(100vh - 80px);
+}
+
+
+/*Grid dos Produto*/
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 por linha*/
+    gap: 20px;
+}
+
+/*Ajuste dos Cards*/
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 200, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+/*Animação dos Cards*/
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 200, 0, 0.8);
+    box-shadow: 0 10px 25px rgba(255, 200, 0, 0.25);
+}
+
+/*Ajuste de Imagem*/
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/*Texto da Descrição*/
+.product-card p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/*Texto do Valor*/
+.product-card strong {
+    font-size: 20px;
+    color: #ff2e2e;
+}
+
+/*Botão do Card de Compra*/
+.product-card button {
+    margin-top: auto;
+    padding: 12px;
+    background-color: rgb(255, 200, 0);
+    color: #000;
+    border: none;
+    border-radius: 999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/*Animação do Botão*/
+.product-card button:hover {
+    transform: scale(1.04);
+}
+
+/*Cursor passa por cima*/
+.product-card button:hover,
+.product-card button.active {
+    background-color: #fff;
+    color: #000;
+}
+
+/*Fundo da tabela*/
+.page {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgb(255, 200, 0, 0.75);
+    border-radius: 12px;
+    padding: 25px;
+    backdrop-filter: blur(6px);
+}
+
+/*Configurações Painel Lateral*/
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 80px);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Espaçamento dos Botões Painel Lateral*/
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.topbar .menu-item {
+    width: auto;
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+
+/*Animação dos botões*/
+.sidebar .menu-item:hover {
+    transform: translateX(4px);
+}
+
+/*Texto do topo do Painel lateral*/
+.sidebar h1 {
+    text-align: center;
+}
+
+/*Desenho dos Botões*/
+.menu-item {
+    background: none;
+    border: 10px;
+    border-radius: 10px;
+    color: #d4d4d4;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    padding: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: rgb(255, 200, 0);
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    color: rgb(255, 200, 0);
+    text-align: center;
+    margin-left: 240px;
+    padding: 20px;
+}

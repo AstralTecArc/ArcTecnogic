@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configuration": 
+ [
+  {
+    "type":"chrome",
+    "resquest":"launch",
+    "name":"Abrir HMTL no Chrome",
+    "file":"${file}"
+
+  }
+ ]
+}
