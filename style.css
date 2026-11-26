@@ -198,7 +198,7 @@ body {
     color: rgb(0, 0, 0);
 }
 
-/*Rodapé*/
+/*Rodapé da página inícial*/
 footer {
     color: rgb(255, 200, 0);
     text-align: center;
@@ -206,16 +206,18 @@ footer {
     padding: 20px;
 }
 
-/**/
+/*Conteúdo central*/
 .main-cart {
     max-width: 900px;
-    margin : 100px auto 0;
+    margin: 100px auto 0;
     padding: 0 20px;
     color: rgb(255, 200, 0);
 }
 
+/* Rodapé central */
 .footer-cart {
     text-align: center;
     margin-top: 20px;
+    margin-left: 0;
     color: rgb(255, 200, 0);
 }
