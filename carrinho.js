@@ -1,15 +1,15 @@
-/* Obtém o carrinho do localStorage */
+// Obtém o carrinho do localStorage
 function getCarrinho() {
     const salvo = localStorage.getItem("arcCarrinho");
     return salvo ? JSON.parse(salvo) : [] //Converte se existir, caso contrario, lista vazia
 }
 
-/* Salva o carrinho no localStorage */
+// Salva o carrinho no localStorage
 function saveCarrinho(carrinho) {
     localStorage.setItem("arcCarrinho", JSON.stringify(carrinho));
 }
 
-/* Adiciona item ao carrinho */
+// Adiciona item ao carrinho */
 function adicionarAoCarrinho(id) {
     const carrinho = getCarrinho();
 
@@ -25,12 +25,12 @@ function adicionarAoCarrinho(id) {
     saveCarrinho(carrinho);
 }
 
-/* Formata o preço para o formato brasileiro */
+// Formata o preço para o formato brasileiro
 function formatarPreco(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
-/* Soma ou Subtrai quantidade */
+// Soma ou Subtrai quantidade 
 function alterarQuantidade(id, mudanca) {
     let carrinho = getCarrinho();
 
@@ -38,23 +38,24 @@ function alterarQuantidade(id, mudanca) {
         return i.id === id;
     });
 
-    if (!item) return; {
-        item.quantidade += mudanca;
+    if (!item) return;
+    item.quantidade += mudanca;
+
 
     if (item.quantidade <= 0) {
-            carrinho = carrinho.filter(function (i) {
-                return i.id !== id;
-            });
-        }
-
-        saveCarrinho(carrinho);
-    }
-
-    /* Remove item de vez */
-    function removerDoCarrinho(id) {
-        const carrinho = getCarrinho().filter(function (i) {
+        carrinho = carrinho.filter(function (i) {
             return i.id !== id;
         });
-        saveCarrinho(carrinho);
     }
+
+    saveCarrinho(carrinho);
 }
+
+// Remove item do carrinho
+function removerDoCarrinho(id) {
+    const carrinho = getCarrinho().filter(function (i) {
+        return i.id !== id;
+    });
+    saveCarrinho(carrinho);
+}
+

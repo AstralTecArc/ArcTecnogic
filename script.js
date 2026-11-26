@@ -42,9 +42,9 @@ function desenharProdutos(categoria) {
         descricao.textContent = produto.descricao;     //Escreve a descrição dentro
 
         const botao = document.createElement("button");//Tag botão carrinho
-        botao.textContent = "Adicionar ao carrinho";    
+        botao.textContent = "Adicionar ao carrinho";
 
-        botao.addEventListener("click", function() { //Adiciona produto ao carrinho
+        botao.addEventListener("click", function () { //Adiciona produto ao carrinho
             adicionarAoCarrinho(produto.id)
         });
 

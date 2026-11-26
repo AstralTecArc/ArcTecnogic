@@ -134,7 +134,7 @@ body {
 /*Fundo da tabela*/
 .page {
     background-color: rgba(0, 0, 0, 0.75);
-    border: 1px solid rgb(255, 200, 0, 0.75);
+    border: 1px solid rgba(255, 200, 0, 0.85);
     border-radius: 12px;
     padding: 25px;
     backdrop-filter: blur(6px);
@@ -179,7 +179,7 @@ body {
 /*Desenho dos Botões*/
 .menu-item {
     background: none;
-    border: 10px;
+    border: none;
     border-radius: 10px;
     color: #d4d4d4;
     width: 100%;
@@ -220,4 +220,63 @@ footer {
     margin-top: 20px;
     margin-left: 0;
     color: rgb(255, 200, 0);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 200, 0, 0.2);
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-info p {
+    color: #d4d4d4;
+}
+
+.cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} 
+
+.cart-qty button,
+.cart-remove {
+    border: none;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    background-color: rgb(255, 200, 0);
+}
+
+.cart-qty button:hover,
+.cart-remove:hover {
+    background-color: #fff;
+}
+
+.cart-item strong {
+    text-align: right;
+    min-width: 110px;
+    color: #ff2e2e;
+}
+
+#total {
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
 }
