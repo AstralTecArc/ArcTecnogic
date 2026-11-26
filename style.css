@@ -198,9 +198,24 @@ body {
     color: rgb(0, 0, 0);
 }
 
+/*Rodapé*/
 footer {
     color: rgb(255, 200, 0);
     text-align: center;
     margin-left: 240px;
     padding: 20px;
+}
+
+/**/
+.main-cart {
+    max-width: 900px;
+    margin : 100px auto 0;
+    padding: 0 20px;
+    color: rgb(255, 200, 0);
+}
+
+.footer-cart {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(255, 200, 0);
 }
